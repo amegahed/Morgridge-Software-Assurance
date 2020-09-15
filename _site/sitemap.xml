@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/about.html</loc>
+<loc>http://localhost:4000/Morgridge-Software-Assurance/about.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/features.html</loc>
+<loc>http://localhost:4000/Morgridge-Software-Assurance/features.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/getting-started.html</loc>
+<loc>http://localhost:4000/Morgridge-Software-Assurance/getting-started.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/help.html</loc>
+<loc>http://localhost:4000/Morgridge-Software-Assurance/help.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>http://localhost:4000/Morgridge-Software-Assurance/</loc>
 </url>
 </urlset>
