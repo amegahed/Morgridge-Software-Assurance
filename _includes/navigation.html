@@ -1,0 +1,16 @@
+<nav class="navbar">
+	<div class="container">
+		<a class="navbar-brand" href="/">
+			<i class="fa fa-check"></i>
+			Morgridge Software Assurance
+		</a>
+
+		<ul class="nav nav-pills">
+		{% for item in site.data.navigation %}
+		<li class="nav-item">
+			<a class="nav-link{% if page.url == item.link %} active{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+		</li>
+		{% endfor %}
+		</ul>
+	</div>
+</nav>

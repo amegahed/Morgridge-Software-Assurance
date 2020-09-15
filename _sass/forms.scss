@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                                 forms.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2012-2020 Morgridge Institute for Research (MIR)        |
+\******************************************************************************/
+
+//
+// form colors
+//
+
+$button-color: $brand-primary;
+$button-hover-color: darken($brand-primary, 10%);
+$button-active-color: darken($brand-primary, 20%);
+
+//
+// form styles
+//
+
+.btn {
+	i {
+		margin-right: 5px;
+	}
+
+	&:hover, &:focus, &:active {
+		box-shadow: none !important;
+	}
+}
+
+.btn-primary:not(:disabled), .btn-primary:not(:disabled):focus {
+	background: $button-color;	
+	border-color: $button-color;
+
+	&:hover {
+		background: $button-hover-color;	
+		border-color: $button-hover-color;	
+	}
+
+	&:active {
+		background: $button-active-color;	
+		border-color: $button-active-color;	
+	}
+}

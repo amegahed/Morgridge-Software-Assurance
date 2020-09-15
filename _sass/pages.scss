@@ -1,0 +1,75 @@
+/******************************************************************************\
+|                                                                              |
+|                                  pages.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2012-2020 Morgridge Institute for Research (MIR)        |
+\******************************************************************************/
+
+.navbar + .container {
+	margin-top: 25px;
+}
+
+.row {
+	margin-bottom: 10px;
+}
+
+.card {
+	background-color: $ultra-light-grey;
+	border: none;
+	padding: 10px;
+
+	em {
+		margin: 10px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+body {
+	font-family: "Gill Sans MT", "Gill Sans", Calibri, sans-serif;
+	font-size: 16px;
+	color: grey;
+}
+
+a {
+	color: $brand-primary;
+
+	&:hover {
+		color: darken($brand-primary, 10%);
+	}
+}
+
+em {
+	color: $brand-primary;
+	font-family: 'TradeGothic', sans-serif;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.footer {
+	margin-top: 15px;
+	
+	.container {
+		color: black;
+		border-top: 5px solid $brand-primary;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		.branding i {
+			color: $brand-primary;
+			margin: 0 5px;
+		}
+	}
+}
