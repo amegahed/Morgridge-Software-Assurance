@@ -1,3 +1,3 @@
 define([], {
-	server: "http://authdemo.cosalab.org:8081"
+	server: "https://authdemo.cosalab.org:8081"
 });
