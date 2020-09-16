@@ -1,14 +1,10 @@
----
-layout: form
-title: Getting Started
----
-# Getting Started
+I"5<h1 id="getting-started">Getting Started</h1>
 
-In order to get started, first fill out the form below to contact us and have us set up a private instance of the software just for you.   Your private instance allows you to upload you code safely in a way that only you will be able to access it.
+<p>In order to get started, first fill out the form below to contact us and have us set up a private instance of the software just for you.   Your private instance allows you to upload you code safely in a way that only you will be able to access it.</p>
 
-Once you have filled out and submitted the contact form below, we will set up an instance of the software and contact you with a unique private URL that you can use to access it.  Then, you can set up an account and begin to analyse your software code.
+<p>Once you have filled out and submitted the contact form below, we will set up an instance of the software and contact you with a unique private URL that you can use to access it.  Then, you can set up an account and begin to analyse your software code.</p>
 
-<br />
+<p><br /></p>
 
 <script>
 	$(document).ready(() => {
@@ -33,7 +29,7 @@ Once you have filled out and submitted the contact form below, we will set up an
 			} else if (!email) {
 				alert("Error - your email is required in order for us to notify you when your instance is ready.")
 			} else {
-				require(['{{site.baseurl}}/config.js'], (Config) => {
+				require(['/Morgridge-Software-Assurance/confing.json'], (Config) => {
 
 					// submit contact info
 					//
@@ -63,6 +59,7 @@ Once you have filled out and submitted the contact form below, we will set up an
 		});
 	});
 </script>
+
 <form>
 	<div class="first-name form-group">
 		<label>First name</label>
@@ -110,12 +107,77 @@ Once you have filled out and submitted the contact form below, we will set up an
 	</div>
 	<div class="languages form-group">
 		<label>Programming Languages</label>
-		{% for item in site.data.languages %}
+		
 		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="{{ item.name }}">
-			<label class="form-check-label">{{ item.name }}</label>
+			<input class="form-check-input" type="checkbox" value="C/C++" />
+			<label class="form-check-label">C/C++</label>
 		</div>
-		{% endfor %}
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Java7 Source" />
+			<label class="form-check-label">Java7 Source</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Java7 Bytecode" />
+			<label class="form-check-label">Java7 Bytecode</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Python2" />
+			<label class="form-check-label">Python2</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Python3" />
+			<label class="form-check-label">Python3</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Android Java Source Code" />
+			<label class="form-check-label">Android Java Source Code</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Ruby" />
+			<label class="form-check-label">Ruby</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Ruby Sinatra" />
+			<label class="form-check-label">Ruby Sinatra</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Ruby on Rails" />
+			<label class="form-check-label">Ruby on Rails</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Ruby Padrino" />
+			<label class="form-check-label">Ruby Padrino</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Android .apk" />
+			<label class="form-check-label">Android .apk</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Java8 Source Code" />
+			<label class="form-check-label">Java8 Source Code</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Java8 Bytecode" />
+			<label class="form-check-label">Java8 Bytecode</label>
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Web Scripting (Javascript, PHP, CSS, XML)" />
+			<label class="form-check-label">Web Scripting (Javascript, PHP, CSS, XML)</label>
+		</div>
+		
 	</div>
 	<div class="message form-group">
 		<label>Message</label>
@@ -125,8 +187,9 @@ Once you have filled out and submitted the contact form below, we will set up an
 	</div>
 </form>
 
-<br />
+<p><br /></p>
 
 <div class="buttons">
 	<button id="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i>Submit</button>
 </div>
+:ET

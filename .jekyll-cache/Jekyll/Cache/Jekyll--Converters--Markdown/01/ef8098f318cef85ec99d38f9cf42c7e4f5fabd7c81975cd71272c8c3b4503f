@@ -1,55 +1,4 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Getting Started</title>
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/assets/css/styles.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/trade-gothic/styles.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/font-awesome-4.7.0/css/font-awesome.css">
-	</head>
-	<body>
-		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-3.4.1.min.js"></script>
-		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/require/require-min.js"></script>
-
-		<script>
-			$(document).ready(() => {
-				$('[data-toggle="popover"]').popover({
-					trigger: 'hover'
-				});
-			});
-		</script>
-		<nav class="navbar">
-	<div class="container">
-		<a class="navbar-brand" href="/Morgridge-Software-Assurance/">
-			<i class="fa fa-check"></i>
-			Morgridge Software Assurance
-		</a>
-
-		<ul class="nav nav-pills">
-		
-		<li class="nav-item">
-			<a class="nav-link" href="/Morgridge-Software-Assurance/about.html">About</a>
-		</li>
-		
-		<li class="nav-item">
-			<a class="nav-link" href="/Morgridge-Software-Assurance/features.html">Features</a>
-		</li>
-		
-		<li class="nav-item">
-			<a class="nav-link active" href="/Morgridge-Software-Assurance/getting-started.html">Getting Started</a>
-		</li>
-		
-		<li class="nav-item">
-			<a class="nav-link" href="/Morgridge-Software-Assurance/help.html">Help</a>
-		</li>
-		
-		</ul>
-	</div>
-</nav>
-		<div class="container">
-			<h1 id="getting-started">Getting Started</h1>
+I"»<h1 id="getting-started">Getting Started</h1>
 
 <p>In order to get started, first fill out the form below to contact us and have us set up a private instance of the software just for you.   Your private instance allows you to upload you code safely in a way that only you will be able to access it.</p>
 
@@ -67,8 +16,7 @@
 			let first_name = $('.first-name input').val();
 			let last_name = $('.last-name input').val();
 			let affiliation = $('.affiliation input').val();
-			let email = $('.email input').val();
-			let message = $('.message textarea').val();
+			let email = $('.last-name input').val();
 			$('.languages input:checked').each(function() {
 				languages.push($(this).attr('value'));
 			});
@@ -80,31 +28,28 @@
 			} else if (!email) {
 				alert("Error - your email is required in order for us to notify you when your instance is ready.")
 			} else {
-				require(['/Morgridge-Software-Assurance/config.js'], (Config) => {
 
-					// submit contact info
+				// submit contact info
+				//
+				return $.ajax({
+					url: '/contact',
+					type: 'POST',
+					data: {
+						first_name: first_name,
+						last_name: last_name,
+						affilation: affiliation,
+						email: email,
+						languages: languages.join(', ')
+					},
+
+					// callbacks
 					//
-					return $.ajax({
-						url: Config.server + '/contact',
-						type: 'POST',
-						data: {
-							first_name: first_name,
-							last_name: last_name,
-							affiliation: affiliation,
-							email: email,
-							languages: languages.join(', '),
-							message: message
-						},
-
-						// callbacks
-						//
-						success: function() {
-							alert("Thank you for your submission.  You will be contacted when your software assurance instance is ready to use. ");
-						},
-						error: function() {
-							alert("Sorry, there was an error in submitting your request. ");
-						}
-					});
+					success: function() {
+						alert("Thank you for your submission.  You will be contacted when your software assurance instance is ready to use. ");
+					},
+					error: function() {
+						alert("Sorry, there was an error in submitting your request. ");
+					}
 				});
 			}
 		});
@@ -232,8 +177,13 @@
 	</div>
 	<div class="message form-group">
 		<label>Message</label>
-		<div class="form-group">
-			<textarea class="form-control" rows="6"></textarea>
+		<div class="form-control">
+			<textarea rows="6" style="width:100%"></textarea>
+			<div class="input-group-append">
+				<span class="input-group-text">
+					<i class="active fa fa-question-circle" data-toggle="popover" data-placement="top" data-container="body" title="Email" data-content="This is your email address so we can notify you when your instance is ready to use."></i>
+				</span>
+			</div>
 		</div>
 	</div>
 </form>
@@ -243,13 +193,4 @@
 <div class="buttons">
 	<button id="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i>Submit</button>
 </div>
-
-		</div>
-		<div class="footer">
-	<div class="container">
-		<span class="copyright">Copyright &copy; 2012-2020</span>
-		<span class="branding"><i class="fa fa-check"></i>Morgridge Software Assurance, Morgridge Institute for Research</span>
-	</div>
-</div>
-	</body>
-</html>
+:ET
