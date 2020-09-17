@@ -50,9 +50,13 @@ a { color: #B90014; }
 
 a:hover { color: red; }
 
-.brand { font-family: 'Optima', sans-serif; font-weight: normal !important; text-transform: uppercase; }
+#branding { display: flex; flex-direction: column; justify-content: center; }
 
-.tagline { font-style: italic; margin: 20px; }
+#branding #logo { height: 125px; margin: 10px; }
+
+#branding .tagline { font-style: italic; margin: 20px; }
+
+.brand { font-family: 'Optima', sans-serif; font-weight: normal !important; text-transform: uppercase; }
 
 h1.brand { font-size: 3em; }
 

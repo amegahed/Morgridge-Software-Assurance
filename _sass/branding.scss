@@ -30,15 +30,26 @@ a {
 	}
 }
 
+#branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	#logo {
+		height: 125px;
+		margin: 10px;
+	}
+
+	.tagline {
+		font-style: italic;
+		margin: 20px;
+	}
+}
+
 .brand {
 	font-family: 'Optima', sans-serif;
 	font-weight: normal !important;
 	text-transform: uppercase;
-}
-
-.tagline {
-	font-style: italic;
-	margin: 20px;
 }
 
 h1.brand {
