@@ -60,6 +60,8 @@ a:hover { color: red; }
 
 h1.brand { font-size: 3em; }
 
+h3.brand { color: red; }
+
 .navbar .brand { font-size: 1em; }
 
 /******************************************************************************\
