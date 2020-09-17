@@ -5,11 +5,13 @@
 		<title>Getting Started</title>
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/assets/css/styles.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/trade-gothic/styles.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/font-awesome-4.7.0/css/font-awesome.css">
 	</head>
 	<body>
 		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/fancybox/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-ui/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-ui/js/plugins/draggable.js"></script>
 		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/require/require-min.js"></script>
 
@@ -66,11 +68,13 @@
 	function error(message) {
 		$('#error-dialog .modal-body').html(message);
 		$('#error-dialog').modal();
+		$('#error-dialog').draggable();
 	}
 
 	function success(message) {
 		$('#success-dialog .modal-body').html(message);
 		$('#success-dialog').modal();
+		$('#error-dialog').draggable();
 	}
 
 	//

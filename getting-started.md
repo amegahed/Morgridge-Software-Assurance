@@ -19,11 +19,13 @@ Once you have filled out and submitted the contact form below, we will set up an
 	function error(message) {
 		$('#error-dialog .modal-body').html(message);
 		$('#error-dialog').modal();
+		$('#error-dialog').draggable();
 	}
 
 	function success(message) {
 		$('#success-dialog .modal-body').html(message);
 		$('#success-dialog').modal();
+		$('#error-dialog').draggable();
 	}
 
 	//
