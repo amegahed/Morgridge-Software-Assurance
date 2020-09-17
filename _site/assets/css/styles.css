@@ -52,7 +52,7 @@ a:hover { color: red; }
 
 #branding { display: flex; flex-direction: column; justify-content: center; }
 
-#branding #logo { height: 125px; margin: 10px; }
+#branding #logo { height: 125px; margin: 10px; filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25)); }
 
 #branding h3 { font-size: 1.75em; }
 
