@@ -90,13 +90,19 @@ h3.brand { color: red; }
 
 .navbar .navbar-brand img { height: 20px; }
 
-.navbar .nav-pills > li > a { padding: .25rem .5rem; color: white; background-color: #B90014; }
+.navbar .navbar-nav > li > a { padding: .25rem .5rem; color: white; background-color: #B90014; border-radius: 5px; }
 
-.navbar .nav-pills > li > a:hover { color: #B90014; background-color: white; }
+.navbar .navbar-nav > li > a:hover { color: #B90014; background-color: white; }
 
-.navbar .nav-pills > li > a.active, .navbar .nav-pills > li > a.active:hover { color: #B90014; background-color: white; }
+.navbar .navbar-nav > li > a.active, .navbar .navbar-nav > li > a.active:hover { color: #B90014; background-color: white; }
 
-.navbar .nav-pills > li + li { margin-left: 2px; }
+.navbar .navbar-nav > li + li { margin-left: 2px; }
+
+.navbar .navbar-toggler { padding: 5px; color: grey; background: white; outline: none; }
+
+.navbar .navbar-toggler .navbar-toggler-icon { height: auto; }
+
+.navbar .navbar-collapse.show .navbar-nav > li { margin-top: 5px; }
 
 /******************************************************************************\
 |                                                                              |
