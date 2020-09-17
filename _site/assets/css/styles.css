@@ -54,6 +54,8 @@ a:hover { color: red; }
 
 #branding #logo { height: 125px; margin: 10px; }
 
+#branding h3 { font-size: 1.75em; }
+
 #branding .tagline { font-style: italic; margin: 20px; }
 
 .brand { font-family: 'Optima', sans-serif; font-weight: normal !important; text-transform: uppercase; }
@@ -144,7 +146,7 @@ em { font-family: sans-serif; }
 
 .card { background-color: #f9f9f9; border: none; padding: 10px 20px; }
 
-.card h2 { margin: 0; }
+.card h2 { margin: 0; color: red; }
 
 .card p { margin-top: 10px; }
 
