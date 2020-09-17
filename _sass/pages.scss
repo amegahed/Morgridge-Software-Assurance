@@ -27,21 +27,23 @@
 	background-color: $ultra-light-grey;
 	border: none;
 	padding: 10px 20px;
+	margin-bottom: 20px;
 
 	h2 {
 		margin: 0;
+		margin-bottom: 10px;
 		color: red;
 	}
 
 	p {
 		display: block;
-		margin-top: 10px;
-		min-height: 6em;
+		margin-top: 20px;
 	}
 
 	img {
 		max-width: 100%;
 		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+		margin-bottom: 20px;
 	}
 }
 
