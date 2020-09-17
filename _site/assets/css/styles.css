@@ -78,7 +78,7 @@ h1.brand { font-size: 3em; }
 |******************************************************************************|
 |        Copyright (C) 2012-2020 Morgridge Institute for Research (MIR)        |
 \******************************************************************************/
-.navbar { color: white; background-color: #B90014; font-family: sans-serif; padding: 5px; }
+.navbar { color: white; background-color: #B90014; font-family: sans-serif; font-weight: bold; padding: 5px; }
 
 .navbar a, .navbar a:hover { color: white; }
 
