@@ -11,6 +11,25 @@ Once you have filled out and submitted the contact form below, we will set up an
 <br />
 
 <script>
+
+	//
+	// dialog methods
+	//
+
+	function error(message) {
+		$('#error-dialog .modal-body').html(message);
+		$('#error-dialog').modal();
+	}
+
+	function success(message) {
+		$('#success-dialog .modal-body').html(message);
+		$('#success-dialog').modal();
+	}
+
+	//
+	// on click callback
+	//
+
 	$(document).ready(() => {
 		$('#submit').click(function() {
 
@@ -27,11 +46,11 @@ Once you have filled out and submitted the contact form below, we will set up an
 			});
 
 			if (!first_name) {
-				alert("Error - your first name is required.")
+				error("Your first name is required.")
 			} else if (!last_name) {
-				alert("Error - your last name is required.")
+				error("Your last name is required.")
 			} else if (!email) {
-				alert("Error - your email is required in order for us to notify you when your instance is ready.")
+				error("Your email is required in order for us to notify you when your instance is ready.")
 			} else {
 				require(['{{site.baseurl}}/config.js'], (Config) => {
 
@@ -52,10 +71,10 @@ Once you have filled out and submitted the contact form below, we will set up an
 						// callbacks
 						//
 						success: function() {
-							alert("Thank you for your submission.  You will be contacted when your software assurance instance is ready to use. ");
+							success("Thank you for your submission.  You will be contacted when your software assurance instance is ready to use. ");
 						},
 						error: function() {
-							alert("Sorry, there was an error in submitting your request. ");
+							error("Sorry, there was an error in submitting your request. ");
 						}
 					});
 				});
@@ -129,4 +148,41 @@ Once you have filled out and submitted the contact form below, we will set up an
 
 <div class="buttons">
 	<button id="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i>Submit</button>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="error-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Form Error</h3>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="success-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Request Sent</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,0 +1,42 @@
+/******************************************************************************\
+|                                                                              |
+|                                 modals.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2012-2020 Morgridge Institute for Research (MIR)        |
+\******************************************************************************/
+
+.modal-dialog {
+	margin-top: 100px;
+	max-width: 600px;
+
+	.modal-header {
+		padding: 5px 10px;
+
+		.close {
+			margin: 0;
+			padding: 10px;
+		}
+	}
+
+	.modal-footer {
+		padding: 5px 10px;
+	}
+
+	button {
+		padding: 5px 10px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

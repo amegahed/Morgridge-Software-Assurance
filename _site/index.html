@@ -5,14 +5,43 @@
 		<title>Home</title>
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/assets/css/styles.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/trade-gothic/styles.css">
+		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/optima/styles.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/jquery/fancybox/jquery.fancybox.css" />
 	</head>
 	<body>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/fancybox/jquery.fancybox.js"></script>
+		<script>
+			$(document).ready(() => {
+				$('.lightbox').each(function(index, item) {
+					$(item).fancybox({
+						'padding': 0,
+						'margin': 20,
+						'openEffect': 'elastic',
+						'closeEffect': 'elastic',
+						'wrapCSS': $(item).attr('class').replace('lightbox', ''),
+
+						// callbacks
+						//
+						afterShow: function() {
+							/*
+							this.wrap.draggable();
+							this.wrap.closest('.fancybox-overlay').css({
+								'overflow-x': 'hidden',
+								'overflow-y': 'hidden'
+							});
+							*/
+						}
+					});	
+				});
+			});
+		</script>
+
 		<nav class="navbar">
 	<div class="container">
-		<a class="navbar-brand" href="/Morgridge-Software-Assurance/">
-			<i class="fa fa-check"></i>
+		<a class="navbar-brand brand" href="/Morgridge-Software-Assurance/">
+			<img src="assets/images/logos/helix-digits-mono.svg" />
 			Morgridge Software Assurance
 		</a>
 
@@ -41,8 +70,9 @@
 			<div class="row">
 
 	<div class="col-md" style="text-align:center">
-		<img width="150px" src="assets/images/logos/icon-large.png" />
-		<h1>Morgridge Software Assurance</h1>
+		<img height="125px" style="margin:30px 0" src="assets/images/logos/helix-digits.svg" />
+		<h1 class="brand">Morgridge</h1>
+		<h3 class="brand">Software Assurance</h3>
 		<div class="tagline">Do It Early, Do It Often</div>
 	</div>
 
@@ -66,28 +96,28 @@
 <div class="row">
 	<div class="col">
 		<div class="card">
-			<em style="text-align:center"><h1>1</h1></em>
+			<em style="text-align:center"><h2>1</h2></em>
 			<em style="text-align:center">Create an instance</em>
 			<p><a href="/getting-started">Contact us</a> to have an instance of the web based tool created for you.</p>
 		</div>
 	</div>
 	<div class="col">
 		<div class="card">
-			<em style="text-align:center"><h1>2</h1></em>
+			<em style="text-align:center"><h2>2</h2></em>
 			<em style="text-align:center">Upload a package</em>
 			<p>Upload your code to the application. Rest assured that it will remain secure.</p>
 		</div>
 	</div>
 	<div class="col">
 		<div class="card">
-			<em style="text-align:center"><h1>3</h1></em>
+			<em style="text-align:center"><h2>3</h2></em>
 			<em style="text-align:center">Run an assessment</em>
 			<p>Create and run an assessment by choosing a package, tool, and platform.</p>
 		</div>
 	</div>
 	<div class="col">
 		<div class="card">
-			<em style="text-align:center"><h1>4</h1></em>
+			<em style="text-align:center"><h2>4</h2></em>
 			<em style="text-align:center">View your results</em>
 			<p>View assessment results. Sort and filter by weakness type or file. </p>
 		</div>
@@ -102,17 +132,17 @@
 	</div>
 	<div class="col">
 		<div class="card">
-			<a href="assets/images/screen-shots/add-new-package.png" target="_blank" class="lightbox" title="Create and Upload a New Package"><img class="photo" src="assets/images/screen-shots/add-new-package-thumb.png" alt="upload new package screen shot" /></a>
+			<a href="assets/images/screen-shots/add-new-package.png" target="_blank" class="lightbox" title="Upload a Package"><img class="photo" src="assets/images/screen-shots/add-new-package-thumb.png" alt="upload new package screen shot" /></a>
 		</div>
 	</div>
 	<div class="col">
 		<div class="card">
-			<a href="assets/images/screen-shots/add-new-assessment.png" target="_blank" class="lightbox" title="Create and Run an Assessment"><img class="photo" src="assets/images/screen-shots/add-new-assessment-thumb.png" alt="create and run an assessment screen shot" /></a>
+			<a href="assets/images/screen-shots/add-new-assessment.png" target="_blank" class="lightbox" title="Run an Assessment"><img class="photo" src="assets/images/screen-shots/add-new-assessment-thumb.png" alt="create and run an assessment screen shot" /></a>
 		</div>
 	</div>
 	<div class="col">
 		<div class="card">
-			<a href="assets/images/screen-shots/view-results.png" target="_blank" class="lightbox" title="View Assessment Results"><img class="photo" src="assets/images/screen-shots/view-results-thumb.png" alt="view results" /></a>
+			<a href="assets/images/screen-shots/view-results.png" target="_blank" class="lightbox" title="View Your Results"><img class="photo" src="assets/images/screen-shots/view-results-thumb.png" alt="view results" /></a>
 		</div>
 	</div>
 </div>
@@ -125,7 +155,6 @@
 		<div class="card">
 			<em>Static analysis</em>
 			<ul>
-				<li>Operates on the original source code</li>
 				<li>Tracks problems down to the location in the original code</li>
 				<li>Quick and easy to use</li>
 				<li>Provides complete code coverage</li>
@@ -193,7 +222,9 @@
 		<div class="footer">
 	<div class="container">
 		<span class="copyright">Copyright &copy; 2012-2020</span>
-		<span class="branding"><i class="fa fa-check"></i>Morgridge Software Assurance, Morgridge Institute for Research</span>
+		<span class="branding"><a href="http://www.morgridge.org">Morgride Institute for Research</a></span>
+		<span><a href="mailto:support@continuousassurance.org"><i class="fa fa-envelope"></i></a></span>
+		<span class="branding pull-right"><a href="http://www.morgridge.org"><img src="https://mk0morgridgeorgkfioq.kinstacdn.com/wp-content/themes/fearless/assets/images/logo.png" height="15px" /></a>
 	</div>
 </div>
 	</body>

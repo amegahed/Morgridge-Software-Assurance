@@ -18,7 +18,9 @@
 .navbar {
 	color: white;
 	background-color: $brand-primary;
-	font-family: 'TradeGothic', sans-serif;
+	// font-family: 'TradeGothic', sans-serif;
+	font-family: sans-serif;
+	// font-weight: bold;
 	padding: 5px;
 
 	a, a:hover {
@@ -27,6 +29,9 @@
 
 	.navbar-brand {
 		font-weight: bold;
+		img {
+			height: 20px;
+		}
 	}
 	
 	.nav-pills {
@@ -36,9 +41,17 @@
 				color: white;
 				background-color: $brand-primary;
 
-				&:hover, &.active {
-					color: white;
-					background-color: darken($brand-primary, 10%);		
+				&:hover {
+					// color: white;
+					// background-color: darken($brand-primary, 10%);
+					color: $brand-primary;
+					background-color: white;	
+				}
+
+				&.active, &.active:hover {
+					color: $brand-primary;
+					background-color: white;
+					// background-color: #2c2c2c;
 				}
 			}
 		}
@@ -48,7 +61,7 @@
 		//
 
 		> li + li {
-			margin-left: 10px;
+			margin-left: 2px;
 		}
 	}
 }

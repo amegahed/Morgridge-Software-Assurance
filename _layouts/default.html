@@ -5,10 +5,39 @@
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="{{site.baseurl}}/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
-		<link rel="stylesheet" href="{{site.baseurl}}/fonts/trade-gothic/styles.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/fonts/optima/styles.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/vendor/jquery/fancybox/jquery.fancybox.css" />
 	</head>
 	<body>
+		<script type="text/javascript" src="{{site.baseurl}}/vendor/jquery/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="{{site.baseurl}}/vendor/jquery/fancybox/jquery.fancybox.js"></script>
+		<script>
+			$(document).ready(() => {
+				$('.lightbox').each(function(index, item) {
+					$(item).fancybox({
+						'padding': 0,
+						'margin': 20,
+						'openEffect': 'elastic',
+						'closeEffect': 'elastic',
+						'wrapCSS': $(item).attr('class').replace('lightbox', ''),
+
+						// callbacks
+						//
+						afterShow: function() {
+							/*
+							this.wrap.draggable();
+							this.wrap.closest('.fancybox-overlay').css({
+								'overflow-x': 'hidden',
+								'overflow-y': 'hidden'
+							});
+							*/
+						}
+					});	
+				});
+			});
+		</script>
+
 		{% include navigation.html %}
 		<div class="container">
 			{{ content }}

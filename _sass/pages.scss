@@ -26,14 +26,19 @@
 .card {
 	background-color: $ultra-light-grey;
 	border: none;
-	padding: 10px;
+	padding: 10px 20px;
 
-	em {
-		margin: 10px;
+	h2 {
+		margin: 0;
+	}
+
+	p {
+		margin-top: 10px;
 	}
 
 	img {
 		max-width: 100%;
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
 	}
 }
 
@@ -43,18 +48,9 @@ body {
 	color: grey;
 }
 
-a {
-	color: $brand-primary;
-
-	&:hover {
-		color: darken($brand-primary, 10%);
-	}
-}
-
 em {
 	color: $brand-primary;
-	font-family: 'TradeGothic', sans-serif;
-	font-weight: bold;
+	// font-weight: bold;
 	font-style: normal;
 }
 
@@ -72,4 +68,12 @@ em {
 			margin: 0 5px;
 		}
 	}
+
+	span + span {
+		margin: 0 5px;
+	}
+}
+
+.btn, .btn-lg {
+	padding: 5px 10px;
 }

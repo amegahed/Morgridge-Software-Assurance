@@ -21,3 +21,30 @@
 
 $brand-primary: #B90014;
 $brand-secondary: $brand-primary;
+
+a {
+	color: $brand-primary;
+
+	&:hover {
+		color: red;
+	}
+}
+
+.brand {
+	font-family: 'Optima', sans-serif;
+	font-weight: normal !important;
+	text-transform: uppercase;
+}
+
+.tagline {
+	font-style: italic;
+	margin: 20px;
+}
+
+h1.brand {
+	font-size: 3em;
+}
+
+.navbar .brand {
+	font-size: 1em;
+}

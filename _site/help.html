@@ -5,14 +5,43 @@
 		<title>Help</title>
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/assets/css/styles.css">
-		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/trade-gothic/styles.css">
+		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/optima/styles.css">
 		<link rel="stylesheet" href="/Morgridge-Software-Assurance/fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="/Morgridge-Software-Assurance/vendor/jquery/fancybox/jquery.fancybox.css" />
 	</head>
 	<body>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="/Morgridge-Software-Assurance/vendor/jquery/fancybox/jquery.fancybox.js"></script>
+		<script>
+			$(document).ready(() => {
+				$('.lightbox').each(function(index, item) {
+					$(item).fancybox({
+						'padding': 0,
+						'margin': 20,
+						'openEffect': 'elastic',
+						'closeEffect': 'elastic',
+						'wrapCSS': $(item).attr('class').replace('lightbox', ''),
+
+						// callbacks
+						//
+						afterShow: function() {
+							/*
+							this.wrap.draggable();
+							this.wrap.closest('.fancybox-overlay').css({
+								'overflow-x': 'hidden',
+								'overflow-y': 'hidden'
+							});
+							*/
+						}
+					});	
+				});
+			});
+		</script>
+
 		<nav class="navbar">
 	<div class="container">
-		<a class="navbar-brand" href="/Morgridge-Software-Assurance/">
-			<i class="fa fa-check"></i>
+		<a class="navbar-brand brand" href="/Morgridge-Software-Assurance/">
+			<img src="assets/images/logos/helix-digits-mono.svg" />
 			Morgridge Software Assurance
 		</a>
 
@@ -58,7 +87,9 @@
 		<div class="footer">
 	<div class="container">
 		<span class="copyright">Copyright &copy; 2012-2020</span>
-		<span class="branding"><i class="fa fa-check"></i>Morgridge Software Assurance, Morgridge Institute for Research</span>
+		<span class="branding"><a href="http://www.morgridge.org">Morgride Institute for Research</a></span>
+		<span><a href="mailto:support@continuousassurance.org"><i class="fa fa-envelope"></i></a></span>
+		<span class="branding pull-right"><a href="http://www.morgridge.org"><img src="https://mk0morgridgeorgkfioq.kinstacdn.com/wp-content/themes/fearless/assets/images/logo.png" height="15px" /></a>
 	</div>
 </div>
 	</body>
