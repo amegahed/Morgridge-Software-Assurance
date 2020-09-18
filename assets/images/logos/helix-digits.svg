@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 60" id="logo-svg">
 	<style>
 		.helix .front {
-			fill: red;
+			fill: #D00000;
 		}
 		.helix .back {
-			fill: #990000;
+			fill: #800000;
 		}
 		.helix .last {
 			fill: black;
