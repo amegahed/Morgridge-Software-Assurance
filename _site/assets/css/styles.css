@@ -48,7 +48,7 @@
 \******************************************************************************/
 a { color: #B90014; }
 
-a:hover { color: red; }
+a:hover { color: #86000e; }
 
 #branding { display: flex; flex-direction: column; justify-content: center; }
 
